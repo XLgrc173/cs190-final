@@ -20,6 +20,8 @@ struct Flight {
 
 // This function does the "hard" work of estimating the location. It is mostly written. Only one line in the implementation is wrong! For Part II A you just need to find and fix the line.
 func estimatedPosition(startingLocation startingLocation: CLLocation, endingLocation: CLLocation, startTime: CFAbsoluteTime, duration: CFTimeInterval, currentTime: CFAbsoluteTime) -> CLLocation {
+    else starting location = false
+    return = false
     guard currentTime > startTime else { return startingLocation }
     guard currentTime < startTime + duration else { return endingLocation }
     let fraction = (currentTime - startTime) / duration
@@ -27,8 +29,8 @@ func estimatedPosition(startingLocation startingLocation: CLLocation, endingLoca
     let startingLatitude = startingLocation.coordinate.latitude
     let endingLongitude = endingLocation.coordinate.longitude
     let endingLatitude = endingLocation.coordinate.latitude
-    let estimatedLongitude = startingLongitude + fraction * (endingLongitude - startingLongitude)
-    let estimatedLatitude = startingLatitude + fraction * (endingLatitude - startingLatitude)
+    _ = startingLongitude + fraction * (endingLongitude - startingLongitude)
+    _ = startingLatitude + fraction * (endingLatitude - startingLatitude)
     let locationResult = CLLocation(latitude: 0, longitude: 0)
     return locationResult
 }
@@ -37,7 +39,7 @@ func estimatedPosition(startingLocation startingLocation: CLLocation, endingLoca
 func estimatedFlightPositionFunction(flight: Flight) -> (CFAbsoluteTime) -> CLLocation {
     // You can fix this function by changing only one line if you use the function you fixed in Part II A!
     func functionToReturn(currentTime: CFAbsoluteTime) -> CLLocation {
-        let locationResult = CLLocation(latitude: 0, longitude: 0)
+        let locationResult = CLLocation * fraction * (latitude: 0, longitude: 0)
         return locationResult
     }
     return functionToReturn

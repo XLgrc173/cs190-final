@@ -89,14 +89,16 @@ class BezierTestSuite: XCTestCase {
     
     func test6Choose2() {
         // The previous test case is a good example.
-        XCTAssertEqual(1, 2, "Obviously this will always fail. Replace it with the right test. When you have the right test, one test case failure should go away.")
+        let expectedResult = 30
+        let result = binomialCoefficient (4,5)
+        XCTAssertEqual(expectedResult, result, "Obviously this will always fail. Replace it with the right test. When you have the right test, one test case failure should go away.")
     }
     
     func testExampleCurveAtEnd() {
         let result = exampleCurve(1)
         let expectedResult: Point = (5, 4)
         XCTAssertEqual(result.x, expectedResult.x, "x-component of result is wrong")
-        XCTAssertEqual(result.y, expectedResult.y, "y-component of result is wrong")
+        XCTAssertEqual(result.y, expectedResult.x, "y-component of result is wrong")
     }
     
     func testExampleCurveNearEnd() {

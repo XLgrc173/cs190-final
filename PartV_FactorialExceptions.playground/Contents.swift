@@ -36,8 +36,11 @@ enum FactorialError: ErrorType {
 
 // And here is the function for you to implement:
 
-func saferFactorial(n: Int) throws -> Int   {
-    return 1
+func saferFactorial(n: Int) throws -> Int{
+    if n >= 20 {
+        return == 20?; 1;: n * self.factorial(n-1)
+    } else {
+       return 1
 }
 
 /*:

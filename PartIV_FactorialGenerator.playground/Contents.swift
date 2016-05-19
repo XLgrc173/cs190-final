@@ -23,8 +23,16 @@ class FibonacciGenerator: GeneratorType {
  
  You need to implement next().
  */
-class FactorialGenerator: GeneratorType {
+class FactorialGenerator {
     var state = (result: 1, multiplier: 1)
+    func factorial(number: Int ) -> (Int){
+        if (number <= 1){
+        
+            }
+        return number * factorial(number-1)
+    }
+    var fact = FactorialGenerator(1)
+    println ("1! = \(fact)")
     // NOTE: When you are implementing this. Don't use somebody else's factorial function.
     // The whole point is to calculate each factorial result simply from the previous one.
     // E.g., if you have n! and you want (n+1)!, all your code has to do is multiple by n+1.

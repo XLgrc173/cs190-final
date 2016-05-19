@@ -27,7 +27,7 @@ struct CollegianArticle {
 }
 
 func titleContainsWordFunction(word: String) -> (CollegianArticle) -> Bool {
-    func titleContainsWord(collegianArticle: CollegianArticle) -> Bool {
+    func titleContainsWord(collegianArticle:String -> CollegianArticle) -> Bool {
         // ===> The following line is broken. This is where you do the work for Part III A. It's a one-liner if you use the hint. <===
         return true
     }
@@ -42,6 +42,9 @@ let willinghamSpeaksOut = CollegianArticle(title: "Willingham speaks out against
 let editorialReflectingBack = CollegianArticle(title: "Editorial: Reflecting back on four years at the Collegian", date: "May 3, 2016", teaserText: "As cliché as it is, I must start by saying that I cannot believe this is my last piece in…")
 
 let allArticles = [annualSpringConcert, annualOneActFestival, willinghamSpeaksOut, editorialReflectingBack]
+var all = [annualSpringConcert, annualOneActFestival, willinghamSpeaksOut, editorialReflectingBack]
+var filterArray = simpleArray.filter ({all})
+println(filteredArray)
 
 // ===> The following let statement is 100% broken. This is where you do the work for Part III B. <===
 // To fix it, you should use filter. It's a one-liner once you figure out how to do that.
